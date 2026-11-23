@@ -1,0 +1,36 @@
+[build-system]
+requires = ["setuptools>=69"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "report2excel"
+version = "0.1.0"
+description = "图片 / PDF 营业报告 → 带公式与自动校验的 Excel 转换工具"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+    "pymupdf>=1.24",
+    "openpyxl>=3.1",
+    "openai>=1.40",
+    "pydantic>=2.7",
+    "pyyaml>=6",
+    "platformdirs>=4",
+    "pillow>=10",
+    "PySide6-Essentials>=6.7",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=8"]
+
+[project.scripts]
+report2excel = "report2excel.cli:main"
+
+[project.gui-scripts]
+report2excel-gui = "report2excel.gui.app:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+filterwarnings = ["ignore:builtin type .* has no __module__ attribute:DeprecationWarning"]

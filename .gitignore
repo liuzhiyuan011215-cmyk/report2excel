@@ -1,0 +1,19 @@
+# Python / venv
+.venv/
+__pycache__/
+*.py[cod]
+*.egg-info/
+build/
+dist/
+.pytest_cache/
+
+# Local runtime outputs & databases
+output/
+*.sqlite3
+*.db
+config.yaml
+.env
+
+# macOS local launcher & OS files
+Report2Excel.app/
+.DS_Store
