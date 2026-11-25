@@ -8,7 +8,8 @@
 ## 快速安装与打开桌面 App
 
 ```bash
-cd "/Users/wangyanan/vs code/pdf 转 Excel"
+git clone https://github.com/liuzhiyuan011215-cmyk/report2excel.git
+cd report2excel
 python3 -m venv .venv
 .venv/bin/pip install -e ".[dev]"
 .venv/bin/python scripts/make_mac_launcher.py   # 生成可双击打开的 Report2Excel.app
